@@ -26,6 +26,7 @@ public class Main {
             case 1:
                 User newUser = new User ( );
                 newUser.addUser ( );
+                // wie komme ich zurück ins Startmenü?
                 break;
 
             case 2:
