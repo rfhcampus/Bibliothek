@@ -1,15 +1,14 @@
 package com.bibliothek;
 
-public class Benutzer {
+public class User {
 
     //Variablen deklarieren
     private String address;
     private String name;
     private boolean locked;
     private int userid;
-    
 
-
-
-    public static
+    void addUser() {
+        System.out.println("Nutzer wird (bald) angelegt...");
+    }
 }
