@@ -6,4 +6,10 @@ public class Book {
     String author;
     String title;
     boolean borrowed;
+
+    public Book addBook() {
+
+
+    }
+
 }

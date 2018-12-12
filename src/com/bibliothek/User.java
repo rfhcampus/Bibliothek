@@ -7,24 +7,26 @@ public class User {
     //Variablen deklarieren
 
     private String address;
-    private String name;
-    private boolean locked = false;
+   // private String name;
+  //  private boolean locked = false;
     private int userid;
-    private int lockedInt;
+  //  private int lockedInt;
 
-    void addUser() {
+
+    public User addUser() {
         Scanner sc = new Scanner(System.in);
 
         System.out.println ("Bitte den Namen des anzulegenden Benutzers eingeben: ");
-        name = sc.nextLine ();
+        String name = sc.nextLine ();
         System.out.println ("Bitte den initialen Status für diesen Nutzer eingeben (0=freigegeben | 1=gesperrt): ");
-        lockedInt = sc.nextInt ();
-        if (lockedInt == 1);
-        locked = true;
+        boolean locked = false;
+        int lockedInt = sc.nextInt ();
+        if (lockedInt == 1) {
+        locked = true; }
 
-        System.out.println("Nutzer " + name + " mit Sperrstatus " + locked + " wird (bald) angelegt...");
+        System.out.println("Benutzer " + name + " mit Sperrstatus " + locked + " wurde als Objekt angelegt.");
 
-
-
+        return new User ();
     }
+
 }

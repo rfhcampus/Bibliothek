@@ -2,7 +2,7 @@ package com.bibliothek;
 
 import java.util.Calendar;
 
-public class Borrow {
+public class Loan {
     //Variablen deklarieren
     int borrowedBook;
     float borrowBegin;
