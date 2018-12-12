@@ -18,6 +18,9 @@ public class Library {
         System.out.println ("------------------------------------");
 
         Scanner sc = new Scanner (System.in);
+        Scanner sc2 = new Scanner (System.in);
+        Scanner sc3 = new Scanner (System.in);
+
         int i = sc.nextInt ();
 
         switch (i) {
@@ -27,8 +30,26 @@ public class Library {
 
             case 1:
                 User newUser = new User ();
-                newUser.addUser ();
-                // wie komme ich zurück ins Startmenü?
+
+                System.out.println ("Bitte den vollständigen Namen des anzulegenden Benutzers eingeben: ");
+                String name = sc2.nextLine ();
+
+                System.out.println (" ");
+                System.out.println ("Erfassung der Anschrift: ");
+                System.out.println ("Straße und Hausnummer? ");
+                String street = sc2.nextLine ();
+
+                System.out.println ("PLZ? ");
+                int postCode  = sc2.nextInt ();
+
+                System.out.println ("Stadt? ");
+                String city = sc3.nextLine ();
+
+                System.out.println ("Bitte den initialen Status für diesen Nutzer eingeben (0=freigegeben | 1=gesperrt): ");
+                int lockedInt = sc.nextInt ();
+
+                newUser.addUser (name,street,postCode,city,lockedInt);
+
                 break;
 
             case 2:
@@ -44,10 +65,12 @@ public class Library {
                 break;
 
             case 6:
-                Library.addBook(new Book("Harry Potter und der Orden des Phönix"));
-                Library.addBook(new Book("Vom Winde verweht"));
-                Library.addBook(new Book("Die Jury"));
-                Library.addBook(new Book("Ein Hobbit"));
+                Book newBook = new Book();
+                newBook.addBook ();
+              /*  Book.addBook(new Book("Harry Potter und der Orden des Phönix"));
+                Book.addBook(new Book("Vom Winde verweht"));
+                Book.addBook(new Book("Die Jury"));
+                Book.addBook(new Book("Ein Hobbit")); */
                 break;
 
             case 7:
